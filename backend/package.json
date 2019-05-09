@@ -1,0 +1,43 @@
+{
+  "name": "besure-graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server-express": "^1.1.7",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.5.1",
+    "mongodb": "^2.2.33",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.7.4",
+    "prettier-standard": "^7.0.1",
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "Andres Gonzalez",
+  "license": "ISC"
+}
