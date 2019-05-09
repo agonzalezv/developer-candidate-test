@@ -3,6 +3,7 @@
 const { makeExecutableSchema } = require('graphql-tools')
 const resolvers = require('./resolvers')
 
+// see https://graphql.org/learn/schema/#type-system for further info
 const typeDefs = `
   type User {
     _id: ID

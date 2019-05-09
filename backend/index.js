@@ -14,6 +14,7 @@ const start = async () => {
 
   app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }))
 
+  // browser playground (optional)
   app.use(
     '/graphiql',
     graphiqlExpress({

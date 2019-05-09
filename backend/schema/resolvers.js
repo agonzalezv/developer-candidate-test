@@ -1,8 +1,10 @@
 'use strict'
 
+// Initialize and fetch nedb object
 const connect = require('../db-connector')
 const db = connect()
 
+// see https://www.apollographql.com/docs/apollo-server/essentials/data for further info in resolvers
 module.exports = {
   Query: {
     Users: async (parent, args = {}, context, info) => {
@@ -13,6 +15,7 @@ module.exports = {
   }
 }
 
+// Create filter based on user input
 const buildFilter = args => {
   const { filter } = args
   const { age, age_gte: ageGTE, age_lte: ageLTE, gender } = filter
@@ -30,6 +33,7 @@ const buildFilter = args => {
   }
 }
 
+// search DB based on filter created above
 const queryData = async (params = {}) => {
   return new Promise((resolve, reject) => {
     db.find(params, (err, doc) => {
