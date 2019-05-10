@@ -16,7 +16,7 @@ See the [backend README](backend/README.md) for further info.
 
 In a separate command prompt, run the [frontend](frontend/README.md): 
 
-- `cd backend/`
+- `cd frontend/`
 - `npm i`
 - `npm run start`
 - Visit [http://localhost:3000](http://localhost:3000) in your browser. 
