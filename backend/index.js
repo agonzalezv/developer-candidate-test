@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express')
 
-const schema = require('./schema')
+const schema = require('./schema/index')
 
 const start = async () => {
   const app = express()
