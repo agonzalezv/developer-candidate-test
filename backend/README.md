@@ -13,13 +13,13 @@
     ```curl -X POST -H "Content-Type: application/json" -d '{"query":"{Users{name age gender _id}}"}' http://localhost:4000/graphql | jq```
 
 - Available items are: `age`, `name`, `gender`, `_id`. 
-- Available filter criterias are : `gender`, `age`, `age_gte`, `age_lte`. Age filtering is mutually exclusive. 
+- Available filter criterias are : `gender`, `age`, `age_gt`, `age_lt`. Age filtering is mutually exclusive. 
 
 Example: 
 
 ```
 query{
-  Users(filter:{age_lte:30, gender:"male"}){
+  Users(filter:{age_lt:30, gender:"male"}){
     age
     name
   }
@@ -40,4 +40,5 @@ query{
 ### Potential improvements
 
 - [ ] Better error handling
-- [ ] Improve input validation
+- [ ] Improve input validation (partly handled by GQL)
+- [ ] Unit tests

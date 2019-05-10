@@ -18,14 +18,14 @@ module.exports = {
 // Create filter based on user input
 const buildFilter = args => {
   const { filter } = args
-  const { age, age_gte: ageGTE, age_lte: ageLTE, gender } = filter
+  const { age, age_gt: ageGT, age_lt: ageLT, gender } = filter
   let bracket
   if (age) {
     bracket = age
-  } else if (ageGTE) {
-    bracket = { $gte: ageGTE }
-  } else if (ageLTE) {
-    bracket = { $lte: ageLTE }
+  } else if (ageGT) {
+    bracket = { $gt: ageGT }
+  } else if (ageLT) {
+    bracket = { $lt: ageLT }
   }
   return {
     ...(gender && { gender }),

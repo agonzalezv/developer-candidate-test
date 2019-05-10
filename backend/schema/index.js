@@ -14,8 +14,8 @@ const typeDefs = `
   
   input UserFilter {
     age: Int
-    age_gte: Int
-    age_lte: Int
+    age_gt: Int
+    age_lt: Int
     gender: String
   }
   

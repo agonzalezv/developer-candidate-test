@@ -22,6 +22,7 @@
     "standard": "^10.0.3"
   },
   "scripts": {
+    "precommit": "prettier-standard '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "start:dev": "nodemon index.js"
