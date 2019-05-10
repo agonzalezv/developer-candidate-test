@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import Jarvis from 'webpack-jarvis';
 
 import paths from './paths';
 
@@ -33,8 +32,5 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new Jarvis({
-            port: 1337
-        })
     ]
 };

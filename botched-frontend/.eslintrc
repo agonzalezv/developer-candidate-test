@@ -1,8 +1,8 @@
 
 {
     "parser": "babel-eslint",
-    "extends": ["airbnb", "prettier", "prettier/react"],
-    "plugins": ["prettier"],
+    "extends": ["prettier", "prettier/react"],
+    "plugins": ["prettier", "react", "import"],
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
@@ -12,34 +12,21 @@
     "env": {
         "browser": true,
         "node": true,
-        "mocha": true,
-        "es6": true,
-        "jest": true
+        "es6": true
     },
     "rules": {
-        "indent": ["error", 4],
-        "space-before-function-paren": "off",
         "react/prefer-stateless-function": "warn",
-        "react/jsx-one-expression-per-line": "off",
         "import/no-extraneous-dependencies": [
             "error",
             { "devDependencies": true }
         ],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "linebreak-style": "off",
-        "global-require": "off",
         "semi": "warn",
-        "arrow-body-style": "off",
-        "no-multiple-empty-lines": ["warn", { "max": 1 }],
         "no-unused-expressions": [
             "error",
             {
                 "allowTaggedTemplates": true
             }
-        ],
-        "no-underscore-dangle": [
-            2,
-            { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }
         ]
     }
 }

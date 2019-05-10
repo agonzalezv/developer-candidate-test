@@ -7,12 +7,12 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint ./src/**/**.js",
-    "precommit": "npm run lint && npm test",
+    "precommit": "npm run lint",
     "prepush": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.dev.xero.com/gareth-cronin/refactionjs.git"
+    "url": "https://github.com/AmbitAI/developer-candidate-test"
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +20,12 @@
     "cross-env": "^5.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.1",
+    "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "axios": "^0.18.0",
+    "styled-components": "^3.4.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
@@ -41,18 +43,15 @@
     "@babel/runtime": "^7.3.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.1",
     "core-js": "3",
     "css-loader": "^2.1.0",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.13.0",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -60,17 +59,14 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.2.0",
     "img-loader": "^3.0.1",
-    "node-sass": "^4.10.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.17.0",
-    "redux-logger": "^3.0.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14",
-    "webpack-jarvis": "^0.3.2",
     "webpack-merge": "^4.1.5"
   }
 }
