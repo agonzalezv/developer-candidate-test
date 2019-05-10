@@ -2,6 +2,8 @@
 
 Refactoring and showcase exercise for JavaScript (solved)
 
+![](demo.gif)
+
 To run:
 
 First run the [backend](backend/README.md): 
